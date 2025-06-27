@@ -15,7 +15,6 @@ export const exceptionHandler = (
   const status = err.statusCode || HttpStatusCode.INTERNAL_SERVER_ERROR;
   const errorCode = err.errorCode! || ErrorCode.INTERNAL_SERVER_ERROR;
 
-  // console.log("check err::", err);
   logger.error(err.message);
 
   res.status(status).json({
